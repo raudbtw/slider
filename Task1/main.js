@@ -15,12 +15,6 @@ const prevButton = document.querySelector(".prev");
 const slideImg = document.querySelector(".slide-img");
 let currentImg = 0;
 
-nextButton.addEventListener("click", nextPic);
-prevButton.addEventListener("click", pervPic);
-
-slideImg.src = imgs[currentImg];
-prevButton.disabled = true;
-
 function nextPic() {
   currentImg++;
   if (currentImg === imgs.length - 1) {
@@ -38,3 +32,9 @@ function pervPic() {
     prevButton.disabled = true;
   }
 }
+
+nextButton.addEventListener("click", nextPic);
+prevButton.addEventListener("click", pervPic);
+
+slideImg.src = imgs[currentImg];
+prevButton.disabled = true;
